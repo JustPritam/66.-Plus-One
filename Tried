@@ -1,0 +1,19 @@
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int l = digits.length;
+        int index = l - 1;
+        while( index >= 0 ){
+            if( digits[ index ] == 9)
+                digits[ index ] = 0;
+            else{
+                digits[ index ] += 1;
+                return digits;
+            }
+            index--;
+        }
+        int[] res = new int[ l + 1 ];
+        res[0] = 1;
+        return res;
+    }
+}
+        
