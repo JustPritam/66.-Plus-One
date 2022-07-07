@@ -1,0 +1,17 @@
+class Solution {
+    static ArrayList<Integer> increment(ArrayList<Integer> arr , int N) {
+        int index = N - 1;
+        while( index >= 0 ){
+            if( arr.get( index ) == 9)
+                arr.set( index,0 );
+            else{
+                arr.set( index,arr.get(index)+1 );
+                return arr;
+            }
+            index--;
+        }
+        arr.set(0,1);
+        arr.add(0);
+        return arr;
+    }
+}
